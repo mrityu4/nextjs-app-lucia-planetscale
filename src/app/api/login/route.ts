@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { NextResponse } from "next/server";
 
 import type { NextRequest } from "next/server";
+export const runtime = 'edge'
 
 export const POST = async (request: NextRequest) => {
   const authRequest = auth.handleRequest("GET", context);

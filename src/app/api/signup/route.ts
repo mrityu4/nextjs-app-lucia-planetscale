@@ -4,7 +4,7 @@ import * as context from "next/headers";
 import { NextResponse } from "next/server";
 
 import type { NextRequest } from "next/server";
-
+export const runtime = 'edge'
 export const POST = async (request: NextRequest) => {
   const formData = await request.formData();
   const username = formData.get("username");

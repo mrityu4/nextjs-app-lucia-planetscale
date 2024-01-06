@@ -2,7 +2,7 @@ import { auth } from "@/auth/lucia";
 import * as context from "next/headers";
 
 import type { NextRequest } from "next/server";
-
+export const runtime = 'edge'
 export const POST = async (request: NextRequest) => {
 	const authRequest = auth.handleRequest(request.method, context);
 	// check if user is authenticated

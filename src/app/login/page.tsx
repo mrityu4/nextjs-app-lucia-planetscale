@@ -3,7 +3,7 @@ import Form from "@/components/form";
 import * as context from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-
+export const runtime = 'edge'
 const Page = async () => {
   const authRequest = auth.handleRequest("GET", context);
   const session = await authRequest.validate();
