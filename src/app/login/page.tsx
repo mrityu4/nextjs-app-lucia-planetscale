@@ -19,6 +19,7 @@ const Page = async () => {
         <label htmlFor="password">Password</label>
         <input type="password" name="password" id="password" />
         <br />
+        <div className="cf-turnstile" data-sitekey="0x4AAAAAAAPl8kLfkPNh97G0"></div>
         <input type="submit" />
       </Form>
       <Link href="/signup">Create an account</Link>

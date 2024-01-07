@@ -9,7 +9,6 @@ export const POST = async (request: NextRequest) => {
   const formData = await request.formData();
   const username = formData.get("username");
   const password = formData.get("password");
-  console.log(username, password);
   // basic check
   if (
     typeof username !== "string" ||
@@ -50,12 +49,10 @@ export const POST = async (request: NextRequest) => {
         username,
       },
     });
-    console.log(user);
     const session = await auth.createSession({
       userId: user.userId,
       attributes: {},
     });
-    console.log(session);
     const authRequest = auth.handleRequest(request.method, context);
     authRequest.setSession(session);
     return new Response(null, {
